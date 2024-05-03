@@ -1,0 +1,135 @@
+:root {
+
+  /* Colors */
+  --dark-cyan:  hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 0.88rem/1.5 Montserrat, sans-serif;
+  background-color: var(--cream);
+  color: var(--dark-grayish-blue);
+}
+
+main {
+  min-height: calc(100vh - 2rem);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  height: 2rem;
+
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+article {
+  height: 30rem;
+  /*  To make info section width resizable */ 
+  /* width: 60%;
+  max-width: 60rem; */
+  width: 40rem;
+
+  border-radius: 1rem;
+  background-color: var(--white);
+
+  display: flex;
+  flex-direction: row;
+}
+
+.product-image {
+  height: 30rem;
+  border-radius: 1rem 0 0 1rem;
+}
+
+.product-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1 {
+  margin: 0.5rem 0;
+  font: bold 2rem Fraunces, sans-serif;
+  color: var(--very-dark-blue);
+}
+
+.category {
+  color: var(--dark-grayish-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+
+.price-block {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.price {
+  color: var(--dark-cyan);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.old-price {
+  text-decoration: line-through;
+}
+
+button {
+  width: 100%;
+  padding: 0.5rem 1rem;
+
+  font: inherit;
+  font-weight: 600;
+  color: var(--white);
+  background-color: var(--dark-cyan);
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+button:hover {
+  background-color: var(--very-dark-blue);
+}
+
+.icon-cart {
+  width: 0.75rem;
+  vertical-align: middle; /* Aligns strangely, not in the middle */
+
+  margin-right: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  article {
+    height: auto;
+    width: 20rem;
+    max-width: 100%;
+    flex-direction: column;
+  }
+
+  .product-image {
+    height: auto;
+    width: 20rem;
+    max-width: 100%;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .price-block {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
