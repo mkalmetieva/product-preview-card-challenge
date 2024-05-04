@@ -6,16 +6,20 @@
   --very-dark-blue: hsl(212, 21%, 14%);
   --dark-grayish-blue: hsl(228, 12%, 48%);
   --white: hsl(0, 0%, 100%);
+
+  /* Fonts */
+  --body-font: 0.88rem/1.5 Montserrat, sans-serif;
+  --header-font: bold 2rem Fraunces, sans-serif;  
 }
 
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font: 0.88rem/1.5 Montserrat, sans-serif;
+  font: var(--body-font);
   background-color: var(--cream);
   color: var(--dark-grayish-blue);
 }
@@ -36,21 +40,16 @@ footer {
 }
 
 article {
-  height: 30rem;
-  /*  To make info section width resizable */ 
-  /* width: 60%;
-  max-width: 60rem; */
-  width: 40rem;
-
+  width: 36rem;
   border-radius: 1rem;
   background-color: var(--white);
 
   display: flex;
-  flex-direction: row;
 }
 
 .product-image {
-  height: 30rem;
+  display: block;
+  width: 18rem;
   border-radius: 1rem 0 0 1rem;
 }
 
@@ -63,7 +62,7 @@ article {
 
 h1 {
   margin: 0.5rem 0;
-  font: bold 2rem Fraunces, sans-serif;
+  font: var(--header-font);
   color: var(--very-dark-blue);
 }
 
@@ -80,7 +79,7 @@ h1 {
 }
 
 .price {
-  font: bold 2rem Fraunces, sans-serif;
+  font: var(--header-font);
   color: var(--dark-cyan);
   font-weight: 700;
 }
@@ -109,7 +108,6 @@ button:hover {
 .icon-cart {
   width: 0.75rem;
   vertical-align: middle; /* Aligns strangely, not in the middle */
-
   margin-right: 0.5rem;
 }
 
